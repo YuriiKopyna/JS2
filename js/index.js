@@ -23,15 +23,15 @@
 //     num = parseFloat(prompt('Enter a number'));
 // }
 
-let productNames = [];
-productNames.push('Tesla X');
-productNames.push('Chevrolet Corvette');
-productNames.push('LC Prado');
-console.log(productNames[0]);
-productNames[0] = 'Tesla S';
-console.log(productNames[0]);
-productNames[3] = 'ZAZ Lanos';
-console.log('length: ' + productNames.length);
+// let productNames = [];
+// productNames.push('Tesla X');
+// productNames.push('Chevrolet Corvette');
+// productNames.push('LC Prado');
+// console.log(productNames[0]);
+// productNames[0] = 'Tesla S';
+// console.log(productNames[0]);
+// productNames[3] = 'ZAZ Lanos';
+// console.log('length: ' + productNames.length);
 
 // console.log('Printing all');
 
@@ -39,8 +39,8 @@ console.log('length: ' + productNames.length);
 //     console.log(productNames[i]);
 // }
 
-productNames[10] = 'Hummer';
-console.log('length: ' + productNames.length);
+// productNames[10] = 'Hummer';
+// console.log('length: ' + productNames.length);
 
 // console.log('Printing all again');
 
@@ -61,23 +61,33 @@ console.log('length: ' + productNames.length);
 // });
 
 //          0    1   2   3   4   5
-let arr = [100, 42, 37, 98, 56, 99];
+// let arr = [100, 42, 37, 98, 56, 99];
 
-function sumOddEls(arr) {
-    let total = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (i % 2 === 1) {
-            total += arr[i];
-        }
-    }
-    return total;   
+// function sumOddEls(arr) {
+//     let total = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i % 2 === 1) {
+//             total += arr[i];
+//         }
+//     }
+//     return total;   
+// }
+
+// function modernSumOddEls(arr) {
+//     return arr.filter( (el, idx ) => idx % 2 )
+//       .reduce(  (acc, el) => acc + el, 0);
+// }
+
+// console.log(sumOddEls(arr));
+// console.log(modernSumOddEls(arr));
+
+const n = parseInt(prompt('Введіть порядковий номер числа Фібоначчі: '));
+// loop method
+first = 1;
+second = 2;
+for ( let i = 3; i <= n; i++) {
+    next = first + second;
+    first = second;
+    second = next;
+    console.log(next);
 }
-
-function modernSumOddEls(arr) {
-    return arr.filter( (el, idx ) => idx % 2 )
-       .reduce(  (acc, el) => acc + el, 0);
-}
-
-console.log(sumOddEls(arr));
-console.log(modernSumOddEls(arr));
-
